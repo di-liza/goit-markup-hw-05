@@ -61,7 +61,16 @@
       <section class="hero section overlay">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button hero-btn" type="button">Замовити послугу</button>
+          <button class="button hero-btn" data-modal-open type="button">Замовити послугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-close-btn" type="button" data-modal-close>
+              <svg class="modal-close-btn-icon">
+                <use href="./images/icons.svg#icon-close" width="30" hieght="30"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="features section">
@@ -120,18 +129,36 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="tasks-list list">
             <li class="tasks-list-item">
-              <img src="./images/img-1.jpg" alt="процес набору коду" width="370" height="294" />
+              <div class="tasks-thumb">
+                <img src="./images/img-1.jpg" alt="процес набору коду" width="370" height="294" />
+                <div class="tasks-title">
+                  <h3 class="tasks-title-text">Десктопні додатки</h3>
+                </div>
+              </div>
             </li>
+
             <li class="tasks-list-item">
-              <img
-                src="./images/img-2.jpg"
-                alt="процес створення мобільного застосунку"
-                width="370"
-                height="294"
-              />
+              <div class="tasks-thumb">
+                <img
+                  src="./images/img-2.jpg"
+                  alt="процес створення мобільного застосунку"
+                  width="370"
+                  height="294"
+                />
+                <div class="tasks-title">
+                  <h3 class="tasks-title-text">Мобільні додатки</h3>
+                </div>
+              </div>
             </li>
+
             <li class="tasks-list-item">
-              <img src="./images/img-3.jpg" alt="палітра кольорів" width="370" height="294" />
+              <div class="tasks-thumb">
+                <img src="./images/img-3.jpg" alt="палітра кольорів" width="370" height="294" />
+
+                <div class="tasks-title">
+                  <h3 class="tasks-title-text">Дизайнерські рішення</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -416,5 +443,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
