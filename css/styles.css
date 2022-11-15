@@ -261,7 +261,7 @@ img {
 }
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
+  visibility: initial;
   pointer-events: none;
 }
 .backdrop {
@@ -274,12 +274,17 @@ img {
 
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.backdrop.is-hidden .modal {
+  transform: scale(0.9) translate(-50%, -50%);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
@@ -288,6 +293,9 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-white-color);
+
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
   display: flex;
