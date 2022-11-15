@@ -143,20 +143,12 @@ img {
   letter-spacing: 0.02em;
   font-size: 14px;
   line-height: 1.17;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-list .link:hover,
 .header-nav-list .link:focus {
   color: var(--accent-color);
-}
-.header-contact-list {
-  display: flex;
-  align-items: baseline;
-
-  margin-left: auto;
-}
-
-.header-contact-list-item + .header-contact-list-item {
-  margin-left: 50px;
 }
 
 /* Виділення поточної сторінки кольором*/
@@ -185,6 +177,16 @@ img {
   font-size: 14px;
 }
 
+.header-contact-list {
+  display: flex;
+  align-items: baseline;
+
+  margin-left: auto;
+}
+
+.header-contact-list-item + .header-contact-list-item {
+  margin-left: 50px;
+}
 .header-contact-list-item .contact {
   display: flex;
   align-items: center;
@@ -193,7 +195,9 @@ img {
   fill: currentColor;
   margin-right: 10px;
 }
-
+.contact.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contact.link:hover,
 .contact.link:focus {
   color: var(--accent-color);
@@ -257,6 +261,7 @@ img {
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .backdrop {
@@ -483,6 +488,9 @@ img {
 
   border-radius: 50%;
   color: #afb1b8;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sm-icon {
   width: 20px;
@@ -514,6 +522,8 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo-icon {
   fill: currentColor;
@@ -550,6 +560,9 @@ img {
   line-height: 1.62;
   font-weight: 500;
   background-color: var(--second-accent-background-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .porfolio-filter-list .main {
   padding-left: 25px;
@@ -590,6 +603,8 @@ img {
   display: block;
 
   text-decoration: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-dscr {
   padding: 20px 24px;
@@ -625,6 +640,8 @@ img {
   content: '';
   background-color: var(--accent-color);
   opacity: 0;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .img-thumb-text {
   position: absolute;
@@ -636,6 +653,8 @@ img {
   color: var(--primary-white-color);
   font-size: 18px;
   line-height: 1.555;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-set-link:hover,
 .card-set-link:focus {
@@ -648,6 +667,7 @@ img {
 }
 .card-set-link:hover .img-thumb-text {
   opacity: 1;
+  transform: translateY();
 }
 
 /* ----------FOOTER---------- */
@@ -731,11 +751,13 @@ img {
 
   width: 44px;
   height: 44px;
-
   border-radius: 50%;
 
   color: var(--primary-white-color);
   background-color: inherit;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-sm-link:hover,
 .footer-sm-link:focus {
